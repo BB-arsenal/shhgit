@@ -1268,12 +1268,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
         if (settings.activeSignatures.length > 0 && !settings.activeSignatures.includes(sigId)) row.style.display = 'none';
         if (settings.notifications.checked) notifyFinding(data.Signature, data.Matches ? data.Matches.join(', ') : data.File);
     };
+    //DO:EIDT
     const listenForEvents = () => {
         window.connection = new PushStream({
-            host: 'localhost',
-            port: 8080,
+            host: '8080-eth0izzle-shhgit-zsauxhhmzs9.ws-eu105.gitpod.io',
+            
             urlPrefixEventsource: '/events',
-            useSSL: false,
+            useSSL: true,
             modes: 'eventsource',
             messagesPublishedAfter: 100,
             messagesControlByArgument: true
